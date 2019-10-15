@@ -11,7 +11,6 @@ What You've Learned
 By the time you submit this project, you will have covered new ground in many of the big themes of the course:
 
 Command Line: Practice interacting with the computer and navigating the filesystem from the command line.
-Source Control: Manage and interact with a git repository to store changes to code.
 Programming Fundamentals: Work with array, objects, event handlers and callbacks, while learning how to strategically solve problems and resolve errors.
 Web Fundamentals: Learn how communication happens over the internet, and how to structure, style, and animate documents within a browser. Also learn how to respond to actions your users take and the data they input into the browser.
 Browser Applications: Dive into CSS, Sass, and how to use libraries and frameworks to get lots of style for free.

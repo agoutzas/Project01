@@ -6,28 +6,35 @@ $(document).ready(function () {
 // // declare variables required to keep info
 
 
-// const moves [];
-// const playerAmoves[];
-// const playerBMoves[];
-//
-// const activePlayer;
+const moves = [];
+const playerAmoves = [];
+const playerBMoves = [];
+const activePlayer = true;
 
 //start on player A and determine whos turn
+
+// const checkforActive = function () {
+//   if (activePlayer = true);
+//   //run selectA fucntion
+// } else
+//  // run selectB function
+
+
+
+// const checkingBalance = + $('#checking-balance').text().slice(1);
+// if (checkingBalance <= 0) {
+//   $('#checking-balance').addClass('zero');
+// }
 
 
 //listen for click;
 
-  $('#1').on('click', function () {
-    $('#1').text("x");
-    // console.log($(this));
-    // $(this).text("x");
-  });
+  $('.tic').on('click', function () {
 
-  $('#2').on('click', function () {
-    $('#2').text("x");
-
-    // console.log($(this));
-    // $(this).text("x");
+    console.log($(this));
+     $(this).text("x");
+     // playerAmoves =  ; // something like this
+     // playerAmoves.push (selection) =
   });
 
 });

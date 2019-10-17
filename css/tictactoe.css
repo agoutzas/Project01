@@ -1,3 +1,9 @@
+
+
+body {
+  background-image: url("../img/WALLPAPER FINAL133WIDE.jpg");
+}
+
 .gameBoard {
   position: relative;
 }
@@ -6,13 +12,19 @@
   height: 650px;
   position: relative;
   margin:auto;
+  padding:25px;
 
 }
+.whosTurn{
+  font-size: 50px;
+  margin-top: 0px;
+  color: #454C54;
+}
 .tic {
-  background-color: yellow;
+  background-color: #FAC557;
   width : 200px;
   height: 200px;
-  border: 2px solid black;
+  border: 2px solid #454C54;
   display: inline-block;
   text-align: center;
   position: relative;
@@ -22,43 +34,88 @@
 }
 
 :hover.tic {
-  background-color: grey;
+  background-color: #454C54;
 }
 .heading {
   margin : auto;
   text-align: center;
+  background-color: #ACC72A;
+  padding:0px 0px 30px 0px;
 }
 h1{
   font-size: 75px;
   margin-top: 0px;
   margin-bottom: 0px;
+  color: #E70D4D;
+  padding: 30px;
 }
 h2 {
   font-size: 50px;
   margin-top: 0px;
   margin-bottom: 0px;
+  color: #454C54;
 }
 p {
-  font-size: 25px;
+  margin:0;
 }
 
 .playerA {
   display:inline-block;
   padding-right: 200px;
+  font-size: 100px;
+}
+#playA {
+  font-size: 20px;
+  width: 330px;
+  text-align: center;
+}
+#playAbutton{
+  font-size: 20px;
+  width: 90px;
+}
+.scoreA {
+  background-color: #00A1D9;
+  width : 330px;
+  height:30px;
+  font-size: 30px;
+  padding:5px;
 }
 .playerB {
   display:inline-block;
   align:right;
+  font-size: 100px;
 }
-
+#playB {
+  font-size: 20px;
+  width: 330px;
+  text-align: center;
+}
+#playBbutton{
+  font-size: 20px;
+  width: 90px;
+}
+.scoreB {
+  background-color: #00A1D9;
+  width : 330px;
+  height:30px;
+  font-size: 30px;
+  padding:5px;
+}
 .resultsTab {
   margin : auto;
   text-align: center;
+  font-size: 100px;
+  background-color:#00A1D9;
 }
 
 .resetBoard {
   margin : auto;
   text-align: center;
-  background-color: red;
-
+  background-color: #E70D4D;
+  padding: 20px;
+}
+button {
+  font-size: 30px;
+  padding:30px;
+  background-color: #00A1D9;
 }

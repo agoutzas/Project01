@@ -1,3 +1,7 @@
+let turn = "x";
+let winner = "no";
+let winingPlayer = '';
+
 
   const winningCombinations = {
   1: ['0','1','2'],
@@ -20,6 +24,11 @@
     playerBScore: 0
   };
 
+  const findWinner = {
+    winnerA: '',
+    winnerB: ''
+  };
+
   const checkWin = function (player) {
     for (let key in winningCombinations) {
       let counter = 0;
@@ -35,7 +44,13 @@
     }
   }
 
-
+  const checkWinner = function() {
+    if (findwinner.winnerA === true){
+    winingPlayer =  winnerA;
+    } else {
+    winingPlayer = winnerB;
+    }
+  };
 
   const addScore = function() {
     if (turn === "x"){
@@ -44,7 +59,9 @@
     else {
       scoreBoard.playerAScore++;
     }
-  }
+  };
 
-  let turn = "x";
-  let winner = "no"
+  const addNames = function () {
+
+  alert ('Please enter a name for Player A and Player B annd press Submit')
+  };

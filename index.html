@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>TicTacToe</title>
+  <title>noughts and crosses</title>
   <link rel="stylesheet" href="css/tictactoe.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <script src="js/jquery-1.7.2.js"></script>
@@ -16,7 +16,7 @@
 <body>
   <div class="heading"id="box">
     <header>
-      <h1>Play Tic Tac Toe</h1>
+      <h1>Play noughts and crosses</h1>
     </header>
 
     <div class="whosTurn">
@@ -24,21 +24,23 @@
     </div>
 
     <div class="playerA">
-      <p>Player A</p>
+      <input id="playA" type="text" placeholder = "Please enter a name for player A" />
+      <input id="playAbutton" type="button" value="Submit"/>
       <div class="scoreA">
-        <p></p>
+      <p>0</p>
       </div>
     </div>
 
     <div class="playerB">
-      <p>Player B</p>
+      <input id="playB" type="text" placeholder = "Please enter a name for player B" />
+      <input id="playBbutton" type="button" value="Submit"/>
+
       <div class="scoreB">
-        <p></p>
+        <p>0</p>
       </div>
     </div>
 
   </div>
-
 
 
   <div class="gameBoard">
@@ -62,7 +64,8 @@
   </div>
 
   <div class="resetBoard">
-    <button type="button" name="Reset Board">Reset Board</button>
+    <button id="resBut" type="button" name="Reset Board">Reset Board</button>
+    <button id="plaAgaBut"type="button" name="Play Again">Play Again</button>
   </div>
 
 </body>

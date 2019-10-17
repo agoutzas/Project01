@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 /*!
  * animate.css -https://daneden.github.io/animate.css/
  * Version - 3.7.2
@@ -110,6 +111,7 @@
 .flash {
   -webkit-animation-name: flash;
   animation-name: flash;
+  animation-iteration-count: infinite;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
@@ -1994,6 +1996,8 @@
   backface-visibility: visible;
   -webkit-animation-name: flip;
   animation-name: flip;
+  animation-duration: 10s;
+
 }
 
 @-webkit-keyframes flipInX {

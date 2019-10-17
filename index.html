@@ -6,9 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>TicTacToe</title>
   <link rel="stylesheet" href="css/tictactoe.css">
+  <link rel="stylesheet" href="css/animate.min.css">
   <script src="js/jquery-1.7.2.js"></script>
   <script src="js/database.js"></script>
   <script src="js/tictactoe.js"></script>
+
 </head>
 
 <body>
@@ -16,12 +18,28 @@
     <header>
       <h1>Play Tic Tac Toe</h1>
     </header>
+
+    <div class="whosTurn">
+      <h2>It's Your Turn</h2>
+    </div>
+
+    <div class="playerA">
+      <p>Player A</p>
+      <div class="scoreA">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="playerB">
+      <p>Player B</p>
+      <div class="scoreB">
+        <p></p>
+      </div>
+    </div>
+
   </div>
 
-  <div class="playerInfo">
-    <p>Player A</p>
-    <p>Player B</p>
-  </div>
+
 
   <div class="gameBoard">
     <div>
@@ -37,6 +55,14 @@
         <div class="tic"id="8"></div>
     </div>
     </div>
+  </div>
+
+  <div class="resultsTab">
+    <p></p>
+  </div>
+
+  <div class="resetBoard">
+    <button type="button" name="Reset Board">Reset Board</button>
   </div>
 
 </body>

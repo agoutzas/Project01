@@ -1,76 +1,100 @@
 
-//document ready
+const draw = function (){
+  let result = $('.resultsTab');
+  let print = result.children();
+  print.text("draw");
+}
+
+const win = function() {
+    if (turn === "x") {
+      let result = $('.resultsTab');
+      let print = result.children();
+      print.text("Our winner is Player B");
+      // flash on playerA
+      //addScore.playerA++
+
+    }else {
+      let result = $('.resultsTab');
+      let print = result.children();
+      print.text("Our winner is Player A");
+      //flash on PlayerB
+      //addScore.playerA++
+    };
+
+  winner = "yes";
+  makeSomeShitGoCrazy();
+  addScore();
+  displayScore();
+  }
+
+
+const makeSomeShitGoCrazy = function() {
+  console.log('have fun with the css');
+}
+
+const displayScore = function (){
+  console.log(scoreBoard.playerAScore);
+  // push scoreBoard.playerBScore to $(".scoreB")
+  console.log(scoreBoard.playerBScore);
+  // push scoreBoard.playerBScore to $(".scoreB")
+}
+////////////////////////////
 
 $(document).ready(function () {
 
-// // declare variables required to keep info
-
-
-const moves = [];
-const playerAmoves = [];
-const playerBMoves = [];
-const activePlayer = true;
-
-//start on player A and determine whos turn
-
-// const checkforActive = function () {
-//   if (activePlayer = true);
-//   //run selectA fucntion
-// } else
-//  // run selectB function
-
-
-
-// const checkingBalance = + $('#checking-balance').text().slice(1);
-// if (checkingBalance <= 0) {
-//   $('#checking-balance').addClass('zero');
-// }
-
-
-//listen for click;
 
   $('.tic').on('click', function () {
 
-    console.log($(this));
-     $(this).text("x");
-     // playerAmoves =  ; // something like this
-     // playerAmoves.push (selection) =
+    if ($(this).text().length === 1) {
+      return;
+    }
+    if (winner === "yes") {
+      return;
+    }
+
+    if (turn === "x") {
+      let result = $('.resultsTab');
+      let print = result.children();
+      print.text("It's Player B's Turn");
+      //highlight playerA class
+      }else {
+      let result = $('.resultsTab');
+      let print = result.children();
+      print.text("It's Player A's Turn");
+      //highlight playerA class
+
+    }
+
+
+    if (turn === "x") {
+      $(this).text("x");
+      playerMoves.playerA.push($(this).attr('id'));
+      turn = "o";
+      checkWin(playerMoves.playerA);
+      if(playerMoves.playerA.length === 5){
+      draw();
+      }
+
+    } else {
+      $(this).text("o"); // can insert image if you wanted here
+      playerMoves.playerB.push($(this).attr('id'));
+      turn = "x";
+      checkWin(playerMoves.playerB);
+      if(playerMoves.playerB.length === 5){
+      draw();
+      };
+    };
+
   });
 
-});
+  $('.resetBoard').on('click', function () {
+      turn = "x";
+      winner = "no";
+      $('.tic').empty();
+      playerMoves.playerA.length = 0;
+      playerMoves.playerB.length = 0;
+      scoreBoard.playerAScore = 0;
+      scoreBoard.playerBScore = 0;
+  });
 
-
-// add eventlistner for when somebody clicks on a cell add an x or o
-
-
-
-
-
-// when someone clicks on gameboard send event to database to checkWinners
-
-
-
-
-  // $('.tic').on('click', function () {
-  //   const playerAfirstMove = $('#checking-amount').val();
-  //   accounts.checkingDeposit( amount );
-  //   render();
-  //
-  //
-  // $('#checking-withdraw').on('click', function () {
-  //   const amount = $('#checking-amount').val();
-  //   accounts.checkingWithdraw( amount );
-  //   render();
-  // });
-  //
-  // $('#savings-deposit').on('click', function () {
-  //   const amount = $('#savings-amount').val();
-  //   accounts.savingsDeposit( amount );
-  //   render();
-  // });
-  //
-  // $('#savings-withdraw').on('click', function () {
-  //   const amount = $('#savings-amount').val();
-  //   accounts.savingsWithdraw( amount );
-  //   render();
-  // });
+});// closes document ready//document ready

@@ -29,9 +29,9 @@ let winingPlayer = '';
     winnerB: ''
   };
 
+  let counter = 0;
   const checkWin = function (player) {
     for (let key in winningCombinations) {
-      let counter = 0;
       for (let i = 0; i < winningCombinations[key].length; i++) {
         if (player.includes(winningCombinations[key][i])){
           counter++;
@@ -53,10 +53,10 @@ let winingPlayer = '';
   };
 
   const addScore = function() {
-    if (turn === "x"){
+    if (turn === "x" && counter !== 3){
       scoreBoard.playerBScore++;
     }
-    else {
+    else (turn === "o" && counter !== 3)){
       scoreBoard.playerAScore++;
     }
   };

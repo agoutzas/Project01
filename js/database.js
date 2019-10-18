@@ -1,6 +1,6 @@
 let turn = "x";
 let winner = "no";
-let winingPlayer = '';
+//let winingPlayer = '';
 
 
   const winningCombinations = {
@@ -24,44 +24,49 @@ let winingPlayer = '';
     playerBScore: 0
   };
 
-  const findWinner = {
-    winnerA: '',
-    winnerB: ''
-  };
+  // const findWinner = {
+  //   winnerA: '',
+  //   winnerB: ''
+  // };
 
-  let counter = 0;
+
   const checkWin = function (player) {
     for (let key in winningCombinations) {
+      let counter = 0;
       for (let i = 0; i < winningCombinations[key].length; i++) {
         if (player.includes(winningCombinations[key][i])){
           counter++;
           }
         }
-      if (counter === 3){
-        win();
-        break;
+        if (counter === 3){
+          console.log("if counter === 3")
+          win();
+          break;
       }
-    }
-  }
 
-  const checkWinner = function() {
-    if (findwinner.winnerA === true){
-    winingPlayer =  winnerA;
-    } else {
-    winingPlayer = winnerB;
     }
   };
 
+
+  // const checkWinner = function() {
+  //   if (findwinner.winnerA === true){
+  //   winingPlayer =  winnerA;
+  //   } else {
+  //   winingPlayer = winnerB;
+  //   }
+  // };
+
   const addScore = function() {
-    if (turn === "x" && counter !== 3){
+    if (turn === "x") {
+      console.log("counter x wining");
       scoreBoard.playerBScore++;
-    }
-    else (turn === "o" && counter !== 3)){
+
+    } else if(turn === "o"){
       scoreBoard.playerAScore++;
     }
   };
 
   const addNames = function () {
 
-  alert ('Please enter a name for Player A and Player B annd press Submit')
+  alert('Please enter a name for Player A and Player B annd press Submit');
   };

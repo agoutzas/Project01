@@ -20,10 +20,10 @@ const win = function() {
       $('.scoreA').addClass('animated flash');
     };
 
-  winner = "yes";
-  makeSomeShitGoCrazy();
-  addScore();
-  displayScore();
+    winner = "yes";
+    makeSomeShitGoCrazy();
+    addScore();
+    displayScore();
   }
 
 const makeSomeShitGoCrazy = function() {
@@ -52,10 +52,11 @@ $(document).ready(function () {
 
   $('.tic').on('click', function () {
 
-    if (playA === '' || playB === ''){
+  if (playA === '' || playB === ''){
+    console.log("in if statement");
       addNames();
       return;
-    }
+  }
 
     if (turn === "x") {
       $('.whosTurn').empty();
@@ -71,7 +72,7 @@ $(document).ready(function () {
       playerMoves.playerA.push($(this).attr('id'));
       turn = "o";
       checkWin(playerMoves.playerA);
-      if(playerMoves.playerA.length === 5){
+      if(playerMoves.playerA.length === 5 && winner === 'no'){
       draw();
       }
 
@@ -80,7 +81,7 @@ $(document).ready(function () {
       playerMoves.playerB.push($(this).attr('id'));
       turn = "x";
       checkWin(playerMoves.playerB);
-      if(playerMoves.playerB.length === 5){
+      if(playerMoves.playerB.length === 5 && winner === "no"){
       draw();
       };
     };
@@ -98,6 +99,7 @@ $(document).ready(function () {
     playerMoves.playerB.length = 0;
     $('.scoreB').removeClass('animated flash');
     $('.scoreA').removeClass('animated flash');
+    $('.resultsTab p').empty();
   });
 
 
@@ -116,7 +118,7 @@ $(document).ready(function () {
       $('.scoreA').removeClass('animated flash');
       $('.scoreA p').text(scoreBoard.playerAScore);
       $('.scoreB p').text(scoreBoard.playerBScore);
-      $('.resetBoard p').trigger('reset');
+      $('.resultsTab p').empty();
 
   });
 
